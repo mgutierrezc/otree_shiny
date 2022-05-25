@@ -26,6 +26,8 @@ class Constants(BaseConstants):
     # templates incluibles
     acerca = "otree_shiny/Acerca.html"
     noticias = "otree_shiny/Noticias.html"
+    inicio = "otree_shiny/Inicio.html"
+    indicadores = "otree_shiny/Indicadores.html"
 
 class Subsession(BaseSubsession):
     pass

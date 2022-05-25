@@ -14,6 +14,8 @@
     <div class="tab">
         <button class="tablinks" onclick="openCity(event, 'Acerca')">Acerca de</button>
         <button class="tablinks" onclick="openCity(event, 'Noticias')" id="defaultOpen">Noticias</button>
+        <button class="tablinks" onclick="openCity(event, 'Inicio')" id="defaultOpen">Inicio</button>
+        <button class="tablinks" onclick="openCity(event, 'Indicadores')">Indicadores</button>
         <button class="tablinks" onclick="openCity(event, 'Contra')">Cambiar contraseña</button>
     </div>
 </section>
@@ -27,6 +29,14 @@
     <h3 align="center">Estimado/a {{ username }}</h3>
     <br><br>
     {% include Constants.noticias %}
+</div>
+
+<div id="Inicio" class="tabcontent">
+    {% include Constants.inicio %}
+</div>
+
+<div id="Indicadores" class="tabcontent">
+    {% include Constants.indicadores %}
 </div>
 
 <div id="Contra" class="tabcontent">
