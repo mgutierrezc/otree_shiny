@@ -29,6 +29,7 @@
     {% formfields %}
 
     <button class="otree-btn-next btn btn-primary next-button">Iniciar sesión</button>
+    {% if form.password.errors %}{{ form.password.errors.0 }}{% endif %}
 
     <p>
       Ingreso por primera vez/Olvidé mi contraseña
