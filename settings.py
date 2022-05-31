@@ -2,10 +2,10 @@ from os import environ
 
 SESSION_CONFIGS = [
     dict(
-       name='otree_shiny',
-       display_name="oTree Shiny",
-       num_demo_participants=1,
-       app_sequence=['otree_shiny']
+        name='otree_shiny',
+        display_name="oTree Shiny",
+        num_demo_participants=1,
+        app_sequence=['otree_shiny']
     ),
 ]
 

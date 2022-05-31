@@ -1,14 +1,10 @@
 from otree.api import (
     models,
-    widgets,
     BaseConstants,
     BaseSubsession,
     BaseGroup,
     BasePlayer,
-    Currency as c,
-    currency_range,
 )
-
 
 author = 'Marco Gutierrez'
 
@@ -28,7 +24,9 @@ class Constants(BaseConstants):
     noticias = "otree_shiny/Noticias.html"
     inicio = "otree_shiny/Inicio.html"
     resumen = "otree_shiny/Resumen.html"
+    rendimiento = "otree_shiny/RendimientoDelConciliador.html"
     indicadores = "otree_shiny/Indicadores.html"
+
 
 class Subsession(BaseSubsession):
     pass

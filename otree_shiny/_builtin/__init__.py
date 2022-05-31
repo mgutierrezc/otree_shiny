@@ -1,6 +1,7 @@
 # Don't change anything in this file.
-from .. import models
 import otree.api
+
+from .. import models
 
 
 class Page(otree.api.Page):
