@@ -10,19 +10,21 @@
                  role="radiogroup" aria-labelledby="landing_variable-label">
                 <label class="control-label" id="landing_variable-label" for="landing_variable">Agrupar expedientes
                     por:</label>
-                <div class="shiny-options-group">
+                <div>
                     <label class="radio-inline">
-                        <input type="radio" name="landing_variable" value="Fecha de registro" checked="checked">
+                        <input type="radio" name="landing_variable" value="Fecha de registro" checked="checked"
+                               class="resumen-radio">
                         <span>Fecha de registro</span>
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" name="landing_variable" value="Fecha de acta">
+                        <input type="radio" name="landing_variable" value="Fecha de acta" class="resumen-radio">
                         <span>Fecha de acta</span>
                     </label>
                 </div>
             </div>
             <div id="landing_date" class="shiny-date-input form-group shiny-input-container shiny-bound-input">
-                <label class="control-label" id="landing_date-label" for="landing_date" style="width:100%; font-weight: bold">
+                <label class="control-label" id="landing_date-label" for="landing_date"
+                       style="width:100%; font-weight: bold">
                     Indicadores se refieren al período del primer día del mes hasta el día que usted elija en este
                     campo:
                     <div class="pull-right">
@@ -31,10 +33,11 @@
                            data-toggle="tooltip" data-placement="top"></i>
                     </div>
                 </label>
-                <input type="text" class="form-control shinyjs-resettable" aria-labelledby="landing_date-label"
-                       title="Date format: yyyy-mm-dd" data-provide="datepicker">
+                <input type="date" class="resumen-datepicker form-control shinyjs-resettable"
+                       aria-labelledby="landing_date-label"
+                       title="Date format: yyyy-mm-dd">
             </div>
-            <div id="monthTable" class="formattable_widget html-widget html-widget-output shiny-bound-output"
+            <div class="formattable_widget html-widget html-widget-output shiny-bound-output"
                  style="width: 100%; visibility: inherit;" width="100%" height="0" aria-live="polite">
                 <table class="table table-condensed table table-condensed">
                     <thead>
@@ -105,6 +108,21 @@
     </div>
 </div>
 <script type="text/javascript">
+    $('.resumen-datepicker').datepicker({autoClose: true});
+    $('.resumen-datepicker').on('changeDate', function () {
+        $(this).datepicker('hide');
+    });
+
+    $('.resumen-radio').on('change', function () {
+        switch ($(this).val()) {
+            case 'Fecha de registro':
+                break;
+            case 'Fecha de acta':
+
+                break;
+        }
+    });
+
     const Resumenlabels = [
         'Sep 2021',
         'Oct 2021',
