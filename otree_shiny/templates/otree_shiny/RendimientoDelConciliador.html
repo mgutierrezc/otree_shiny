@@ -90,12 +90,12 @@
                     resolución</label>
                 <div class="input-group input-group-sm">
                     <input class="datepicker form-control" type="text" aria-labelledby="date_concil_solo-label"
-                           title="Date format: yyyy-mm-dd">
+                           title="Date ">
                     <span class="input-group-addon input-group-prepend input-group-append">
               <span class="input-group-text">a</span>
             </span>
                     <input class="datepicker form-control" type="text" aria-labelledby="date_concil_solo-label"
-                           title="Date format: yyyy-mm-dd">
+                           title="Date ">
                 </div>
             </div>
             <a id="concilPDF" class="btn btn-success text-white mt-4"
@@ -150,7 +150,7 @@
                 subTitleOne.html('Las gráficas abajo representan el total histórico y la evolución de su tasa de efectividad.');
                 subTitleTwo.html('¿Qué tan exitoso soy para llegar a un acuerdo (total / parcial) para cada materia de expediente conciliatorio?');
                 subTitleThree.html('¿Qué tan exitoso he sido para llegar a un acuerdo en expedientes de meses anteriores?');
-                  drawChartOne('Porcentaje de acuerdos exitosos');
+                drawChartOne('Porcentaje de acuerdos exitosos');
                 drawChartTwo('Tasa de efectividad', 'Tiempo');
                 break;
             case 'Duración de expedientes':
@@ -164,7 +164,7 @@
         }
     });
 
-    function drawChartOne(xAxisLabel='' ) {
+    function drawChartOne(xAxisLabel = '') {
         const expendientesLabels = [
             'PENSION DE ALIMENTOS',
             'DESALOJO',
@@ -222,7 +222,8 @@
             númeroExpedientesConfig
         );
     }
-    function drawChartTwo(xAxisLabel='',  yAxisLabel='') {
+
+    function drawChartTwo(xAxisLabel = '', yAxisLabel = '') {
 
         const conciliatoriosLabels = [
             '2014', '', '', '', '', '', '', '', '', '', '', '',

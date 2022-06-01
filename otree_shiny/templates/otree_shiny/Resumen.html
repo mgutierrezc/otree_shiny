@@ -33,9 +33,9 @@
                            data-toggle="tooltip" data-placement="top"></i>
                     </div>
                 </label>
-                <input type="date" class="resumen-datepicker form-control shinyjs-resettable"
+                <input type="text" class="resumen-datepicker form-control shinyjs-resettable"
                        aria-labelledby="landing_date-label"
-                       title="Date format: yyyy-mm-dd">
+                       title="Date ">
             </div>
             <div class="formattable_widget html-widget html-widget-output shiny-bound-output"
                  style="width: 100%; visibility: inherit;" width="100%" height="0" aria-live="polite">
@@ -108,7 +108,9 @@
     </div>
 </div>
 <script type="text/javascript">
-    $('.resumen-datepicker').datepicker({autoClose: true});
+    $('.resumen-datepicker').datepicker({
+        autoClose: true, dateFormat: 'YYYY-MM-DD'
+    });
     $('.resumen-datepicker').on('changeDate', function () {
         $(this).datepicker('hide');
     });
